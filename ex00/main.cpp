@@ -3,7 +3,7 @@
 
 int fight(bool flee){
     Enemy* e = Owned().e();
-    if (flee) {return -1;}      // BUG: leaks e
+    if (flee) {return -1;}
     int result = e->hp;
     return result;
 }

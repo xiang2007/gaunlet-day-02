@@ -3,7 +3,7 @@ struct Enemy { int hp = 100; };
 
 int fight(bool flee){
     Enemy* e = new Enemy();
-    if (flee) {delete e; return -1;}      // BUG: leaks e
+    if (flee) {delete e; return -1;}
     int result = e->hp;
     delete e;
     return result;
