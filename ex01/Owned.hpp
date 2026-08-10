@@ -10,7 +10,7 @@ class Owned
 		Owned &operator=(const Owned& ot) = delete;
 		~Owned();
 
-		Enemy* operator->();
+		Enemy* operator->() const;
 	private:
 		Enemy *m_e;
 };

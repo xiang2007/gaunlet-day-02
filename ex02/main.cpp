@@ -4,7 +4,7 @@
 struct Enemy { int hp = 100; };
 
 int fight(bool flee){
-    //
+    // Used unique pointer as im not changing owners
     std::unique_ptr t = std::make_unique<Enemy>();
     Enemy *e = t.get();
     if (flee) {return -1;}

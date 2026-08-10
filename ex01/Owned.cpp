@@ -9,6 +9,6 @@ Owned::~Owned() {
 	delete m_e;
 }
 
-Enemy* Owned::operator->() {
+Enemy* Owned::operator->() const{
 	return m_e;
 }
