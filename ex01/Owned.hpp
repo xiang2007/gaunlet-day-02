@@ -6,11 +6,11 @@ class Owned
 {
 	public:
 		Owned();
-		Owned(const Owned& ot);
-		Owned &operator=(const Owned& ot);
+		Owned(const Owned& ot) = delete;
+		Owned &operator=(const Owned& ot) = delete;
 		~Owned();
 
-		Enemy* e() const;
+		Enemy* operator->();
 	private:
 		Enemy *m_e;
 };

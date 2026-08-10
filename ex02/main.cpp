@@ -1,9 +1,13 @@
 #include <iostream>
-#include "Owned.hpp"
+#include <memory>
+
+struct Enemy { int hp = 100; };
 
 int fight(bool flee){
-    Owned e;
-    if (flee) { return -1;}
+    //
+    std::unique_ptr t = std::make_unique<Enemy>();
+    Enemy *e = t.get();
+    if (flee) {return -1;}
     int result = e->hp;
     return result;
 }

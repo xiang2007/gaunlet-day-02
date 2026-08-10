@@ -1,5 +1,5 @@
 # The binary this exercise builds
-NAME := hello
+NAME := fight
 
 # Compiler and the gauntlet's mandatory flags
 CXX      := c++

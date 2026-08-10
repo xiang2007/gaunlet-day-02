@@ -1,9 +1,9 @@
 # The binary this exercise builds
-NAME := out
+NAME := fight
 
 # Compiler and the gauntlet's mandatory flags
 CXX      := c++
-CXXFLAGS := -Wall -Wextra -Werror -std=c++17
+CXXFLAGS := -Wall -Wextra -Werror -std=c++17 -fsanitize=address
 
 # List every .cpp file in the exercise here
 SRCS := main.cpp \

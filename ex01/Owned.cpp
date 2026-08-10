@@ -1,22 +1,14 @@
 #include "Owned.hpp"
+#include <iostream>
 
 Owned::Owned() {
 	m_e = new Enemy();
-}
-
-Owned::Owned(const Owned& ot) {
-	this->m_e = ot.m_e;
-}
-
-Owned& Owned::operator=(const Owned& ot) {
-	this->m_e = ot.m_e;
-	return (*this);
 }
 
 Owned::~Owned() {
 	delete m_e;
 }
 
-Enemy* Owned::e() const {
+Enemy* Owned::operator->() {
 	return m_e;
 }
